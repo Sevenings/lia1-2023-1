@@ -1,0 +1,26 @@
+CREATE TABLE Cliente 
+( 
+ cli_id INT PRIMARY KEY,  
+  cli_nome VARCHAR(n),  
+   cli_endereco VARCHAR(n),  
+   ); 
+
+   CREATE TABLE livro 
+   ( 
+    liv_id INT PRIMARY KEY,  
+     lib_titulo VARCHAR(n),  
+      liv_isbn VARCHAR(n),  
+      ); 
+
+      CREATE TABLE Venda 
+      ( 
+       ven_id INT PRIMARY KEY,  
+        ven_frete INT,  
+         ven_valor INT,  
+          cli_id  INT,  
+           liv_id  INT,  
+           ); 
+
+           ALTER TABLE Venda ADD FOREIGN KEY(cli_id ) REFERENCES Cliente (cli_id )
+           ALTER TABLE Venda ADD FOREIGN KEY(liv_id ) REFERENCES livro (liv_id )
+
